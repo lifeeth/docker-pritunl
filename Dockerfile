@@ -18,7 +18,10 @@ EXPOSE 9700
 EXPOSE 1194
 EXPOSE 11194
 
-CMD ["/usr/bin/tail -f /var/log/pritunl.log"]
+ENTRYPOINT ["/bin/entry.sh"]
+
+CMD ["/usr/bin/tail", "-f","/var/log/pritunl.log"]
+
 
 
 

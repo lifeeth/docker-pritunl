@@ -6,6 +6,9 @@ set -e
 [ -c /dev/net/tun ] ||
     mknod /dev/net/tun c 10 200
 
+touch /var/log/pritunl.log
+
+touch /var/run/pritunl.pid
 
 /bin/rm /var/run/pritunl.pid
 
